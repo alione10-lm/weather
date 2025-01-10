@@ -76,7 +76,7 @@ function Weather() {
   }
   return (
     <div className="flex flex-col items-center justify-center  gap-4 ">
-      <header className="z-50 bg-[url('/hero.jpeg')]  bg-no-repeat bg-cover bg-center w-full h-56 flex flex-col items-center">
+      <header className="z-50 bg-[url('/hero.jpeg')]  bg-no-repeat   bg-cover bg-center w-full h-60 flex flex-col items-center">
         <form
           onSubmit={HandleSubmit}
           className="flex justify-center  w-full items-center gap-1"
@@ -86,9 +86,9 @@ function Weather() {
             onChange={(e) => setLocation(e.target.value)}
             type="text"
             placeholder="city ..."
-            className="text-indigo-500 bg-transparent backdrop-blur-xl rounded-lg border-none  focus:outline-none focus:ring-2 focus:ring-indigo-600 px-4  transition-all placeholder:text-indigo-500 duration-300 py-2 my-4"
+            className="text-indigo-50 bg-transparent backdrop-blur-xl rounded-lg border-none  focus:outline-none focus:ring-2 focus:ring-indigo-600 px-4  transition-all placeholder:text-indigo-50 font-bold text-lg duration-300 py-3 my-4"
           />
-          <button className="bg-indigo-500 border-none focus:border-none focus:outline-none hover:bg-indigo-600 transition-all duration-300 focus:ring focus:ring-indigo-600  text-indigo-50 font-medium block px-4 py-2 rounded-lg">
+          <button className="bg-indigo-500 border-none focus:border-none focus:outline-none hover:bg-indigo-600 transition-all duration-300 focus:ring focus:ring-indigo-600  text-indigo-50 font-medium block px-5 py-3 rounded-lg">
             search
           </button>
         </form>
@@ -133,12 +133,12 @@ function Weather() {
       {isLoading ? (
         <Spinner />
       ) : (
-        <main className="w-full overflow-scroll ">
+        <main className="w-full px-2 overflow-scroll ">
           <div className="grid grid-cols-3 gap-2">
             {weather?.time?.map((time, ndx) => (
               <div
                 key={ndx}
-                className=" backdrop-blur-[5px] border bg-indigo-100 p-4 rounded-lg  transition-all duration-100 cursor-pointer flex flex-col items-center"
+                className=" backdrop-blur-[5px]  bg-indigo-100 p-4 rounded-lg  transition-all duration-100 cursor-pointer flex flex-col items-center"
               >
                 <p className="text-3xl mb-5">
                   {getWeatherIcon(weather.weathercode[ndx])}
