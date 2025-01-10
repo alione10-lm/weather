@@ -77,7 +77,7 @@ function Weather() {
   return (
     <div className="flex flex-col items-center  gap-4 ">
       <header className="z-50 bg-[url('/hero.jpeg')]  bg-no-repeat bg-cover bg-center w-full h-56 rounded-md flex flex-col items-center">
-        <form onSubmit={HandleSubmit} className="flex items-center gap-1">
+        <form onSubmit={HandleSubmit} className="flex px-4 items-center gap-1">
           <input
             value={location}
             onChange={(e) => setLocation(e.target.value)}
