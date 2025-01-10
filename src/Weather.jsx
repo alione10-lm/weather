@@ -76,19 +76,19 @@ function Weather() {
   }
   return (
     <div className="flex flex-col items-center justify-center  gap-4 ">
-      <header className="z-50 bg-[url('/hero.jpeg')]  bg-no-repeat   bg-cover bg-center w-full h-60 flex flex-col items-center">
+      <header className="z-50 bg-[url('/hero.jpeg')]  bg-no-repeat  bg-cover bg-center w-full h-60 flex flex-col items-center">
         <form
           onSubmit={HandleSubmit}
-          className="flex justify-center  w-full items-center gap-1"
+          className="flex justify-center px-5  w-full items-center gap-1"
         >
           <input
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             type="text"
             placeholder="city ..."
-            className="text-indigo-50 bg-transparent backdrop-blur-xl rounded-lg border-none  focus:outline-none focus:ring-2 focus:ring-indigo-600 px-4  transition-all placeholder:text-indigo-50 font-bold text-lg duration-300 py-3 my-4"
+            className="text-indigo-50 bg-transparent backdrop-blur-xl rounded-lg border-none  focus:outline-none focus:ring-2 focus:ring-indigo-600 px-4 w-[15rem] transition-all placeholder:text-indigo-50 font-bold text-lg duration-300 py-3 my-4"
           />
-          <button className="bg-indigo-500 border-none focus:border-none focus:outline-none hover:bg-indigo-600 transition-all duration-300 focus:ring focus:ring-indigo-600  text-indigo-50 font-medium block px-5 py-3 rounded-lg">
+          <button className="bg-indigo-500 border-none focus:border-none focus:outline-none hover:bg-indigo-600 transition-all duration-300 focus:ring focus:ring-indigo-600  text-indigo-50 font-medium block px-4 py-3 rounded-lg">
             search
           </button>
         </form>
